@@ -34,7 +34,23 @@
   tableRow.append(...headerRows)
   tableTag.append(tableRow);
   
-  console.log(tableTag);
+  const bodyTable = MOUNTAINS.map((mountain) => {
+    const tableRow = document.createElement('tr');
+    const rowCells = Object.values(mountain).map((value) =>{
+      const rowCell = document.createElement('td');
+      rowCell.innerText = value;
+      return rowCell;
+    } )
+    tableRow.append(...rowCells);
+    return tableRow;
+  }
+  )
+
+  tableTag.append(...bodyTable);
+
+  document.querySelector('#mountains').append(tableTag);
+  document.querySelector('tr').style = 'text-align:left';
+
 
 
 </script>

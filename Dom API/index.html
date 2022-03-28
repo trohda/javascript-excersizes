@@ -22,7 +22,21 @@
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
   ];
 
-  // Your code
+  const tableTag = document.createElement('table');
+  const tableRow = document.createElement('tr');
+  
+  const headerRows = Object.keys(MOUNTAINS[0]).map((keyName) => {
+    const headerCell = document.createElement('th');
+    headerCell.innerText = keyName;
+    return headerCell;
+  });
+
+  tableRow.append(...headerRows)
+  tableTag.append(tableRow);
+  
+  console.log(tableTag);
+
+
 </script>
 </body>
 </html>

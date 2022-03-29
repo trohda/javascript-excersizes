@@ -5,9 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px 10px;
+        margin-bottom: 20px;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main>*{
+        background-color: rgb(222, 222, 223);
+        width: 25%;
+        min-height:700px;
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 5px 10px 15px rgba(200, 200, 200, 10);
+        text-decoration: underline;
+    }
+    #taskContent {
+        width: 95%;
+        height: 200px;
+    }
+    .addNewTask {
+        color: white;
+        background-color: gray;
+        height:400px ;
+    }
+
+    main>*:hover {
+        border: 2px solid black;
+        box-shadow: 10px 20px 30px rgba(200, 200, 200, 10);
+    }
+    
+
+</style>
 <body>
     
+    <header>
+        <h1>Simple Todo List application</h1>
+    </header>
+
+    <main>
+
+        <section class="toDoTasksList">
+            <h2>"ToDo" List:</h2>
+            <hr>
+            <ul>
+
+            </ul>
+        </section>
+
+        <section class="doneTasksList">
+            <h2>Done Tasks:</h2>
+            <hr>
+            <ul>
+                
+            </ul>
+        </section>
+
+        <aside class="addNewTask">
+            <h2>Add New Task:</h2>
+            <hr>
+            <form>
+                 <label for="taskContent">Task content</label><br>
+                 <textarea name="taskContent" id="taskContent"></textarea>
+                 <button>Add Tast to "ToDo" List</button>
+             </form>
+        </aside>
+
+
+    </main>
 
     <script type="module" src="./Modules/app.js"></script>
 

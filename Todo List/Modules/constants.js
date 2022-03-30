@@ -7,6 +7,5 @@ export const START_TODO_LIST = [
 ];
 
 export const toDoListRef = document.querySelector('.toDoList');
-export const doneListRef = document.querySelector('.doneList');
 export const addButtonRef = document.querySelector('.addButton');
 export const textAreaRef = document.querySelector('textarea');

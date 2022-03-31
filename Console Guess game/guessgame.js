@@ -34,12 +34,17 @@ const checkResult = () =>{
 }
 
 let startRound = (turn) =>{
-    playerNumber = parseInt(prompt('Write below your "shot":'));
+    playerNumber = parseInt(prompt('Write below your "shot":')) || 0;
+    if (playerNumber == 0){
+        alert('Give a correct number!');
+        startRound(roundNumber);
+    }else{
     console.log(randomGenerateNumber);
     console.log(`It's Yours ${turn} of three chances.`)
     console.log(`Your number is:  ${playerNumber}.`);
     console.log(`Now im thinking... 🤔🤔🤔`);
     timer3 = setTimeout(checkResult, 2000);
+    }
 }
 
 startRound(roundNumber);
